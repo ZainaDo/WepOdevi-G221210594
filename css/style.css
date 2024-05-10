@@ -1,21 +1,21 @@
 .header {
-    background-color: rgb(172, 151, 151)
+    background-color: rgb(172, 151, 151) ;
 }
 .header a{
-    color:  rgb(172, 151, 151);
+    color:  white;
     opacity: 0.9;
     font-size: 18px;
 }
 .header a:hover{
-    text-shadow: 1px   rgb(172, 151, 151);
+    text-shadow: 1px black;
     opacity: 1;
     transition: all 0.1s linear;
-    color:  rgb(172, 151, 151);
+    color:  black;
 }
 
 .giris{
     padding: 10px;
-    text-align: center;
+    text-align: center; 
     border: 1px solid;
     border-radius: 10px;
     margin: 2rem 1rem;
@@ -47,6 +47,7 @@
     border-bottom-right-radius: 10px;
     box-shadow: 1px 1px 1px gray;
     margin: 0;
+    
 }
 .yazi p{
     text-align: justify;
