@@ -23,7 +23,7 @@ if(isset($_POST['gonder'])){
         echo "<br>Mesaj : $mesaj";
     }
     else{
-        header("Location:../html/iletisim.html");   
+        header("Location:../html/iletisim.html");
     }
 }
 else {
