@@ -7,6 +7,7 @@ if(isset($_POST['login'])){
     $sifre="12345";
     $kullaniciAdi=$_POST["kullaniciAdi"];
     $parola=$_POST["parola"];
+    
     if($kullaniciAdi!="" && $parola!=""){
         if($kullaniciAdi==$kulAd && $parola==$sifre){
             echo "Hoşgeldiniz <br><hr>";

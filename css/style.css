@@ -1,18 +1,24 @@
-
+.Logo {
+    padding-right: 80px;
+}
 
 .header {
     background-color: rgb(172, 151, 151) ;
+ 
+    
 }
 .header a{
     color:  white;
     opacity: 0.9;
     font-size: 18px;
+    
 }
 .header a:hover{
     text-shadow: 1px black;
     opacity: 1;
     transition: all 0.1s linear;
     color:  black;
+  
 }
 
 .giris{
