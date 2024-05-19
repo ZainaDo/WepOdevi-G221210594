@@ -9,7 +9,7 @@ function formDenetle(){
     if(!(isNaN(Ad))){
         labelAd.style.color="rgb(201, 55, 19)";
         Hata.style.visibility="visible";
-        //return false;
+        return false;
     }
     else{
         labelAd.style.color="black";
@@ -18,7 +18,7 @@ function formDenetle(){
     if(!(isNaN(Soyad))){
         labelSoyad.style.color="rgb(201, 55, 19)";
         Hata.style.visibility="visible";
-        //return false;
+        return false;
     }
     else{
         labelSoyad.style.color="black";
@@ -27,16 +27,38 @@ function formDenetle(){
     if(Mesaj==""){
         labelMesaj.style.color="rgb(201, 55, 19)";
         Hata.style.visibility="visible";
-        //return false;
+        return false;
     }
     else{
         labelMesaj.style.color="black";
         Hata.style.visibility="hidden";
     }
-    if(isNaN(ad) && isNaN(Soyad) && Mesaj != ""){
+    if(isNaN(Ad) && isNaN(Soyad) && Mesaj != ""){
         return true;
     }
     else{
         return false;
     }
 }
+
+new Vue({
+    el: '#form',
+    methods: {
+submitForm: function(event) {
+    event.preventDefault(); // prevent the default form submission
+    if (formDenetle()) { // only proceed if the form validation passes
+        var formData = new FormData(event.target);
+        fetch('../php/iletisimf.php', { // point to the new PHP file
+            method: 'POST',
+            body: formData
+        }).then(function(response) {
+            if(response.ok) {
+                alert('Form submitted successfully!');
+            } else {
+                alert('Error submitting form!');
+            }
+        });
+    }
+}
+    }
+});

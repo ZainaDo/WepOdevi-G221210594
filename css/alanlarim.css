@@ -1,6 +1,4 @@
-*{
-    background-color: white; 
-}
+
 .giris{
     padding: 10px;
     text-align: center; 
@@ -29,7 +27,7 @@
 }
 .yazi{
     padding-top: 1.5rem;
-    height: 10em;
+    height: 12em;
     border-bottom: 1px solid;
     border-right: 1px solid;
     border-bottom-right-radius: 10px;
